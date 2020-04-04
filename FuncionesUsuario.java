@@ -27,6 +27,8 @@ public class FuncionesUsuario{
         }
 }
     
+    Usuario.saldo= sueldo;
+    
     
     
     
