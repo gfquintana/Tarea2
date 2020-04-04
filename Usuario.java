@@ -1,3 +1,6 @@
+
+import java.util.Objects;
+
 public class Usuario{
     
    String nombre;
@@ -54,6 +57,28 @@ public class Usuario{
     public void setSaldo(int saldo) {
         this.saldo = saldo;
     }
+    
+    public Usuario (String name, String ci, String psw, int age, int cantHijos, int sal ){
+        nombre= name;
+        ci= cédula;
+        psw= contraseña;
+        cantHijos= cantidadDeHijos;
+        sal=saldo;
+        
+    }
+
+    
+    @Override
+    public boolean equals(Object obj) {
+        
+        Usuario u = (Usuario) obj;
+        if (!Objects.equals(this.contraseña, u.contraseña)) {
+            return false;
+        }
+        return true;
+    }
+    
+    
     
     
 }
